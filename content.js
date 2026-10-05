@@ -31,7 +31,7 @@ var FILM = [
   {
     title: "머물다, 흩어지다", year: 2026,
     director: "Lee Won Jae",
-    note: ["Shot on Super 16, Arri SR2"],
+    note: ["Shot on Super 16, Kodak Vision3 250D 7207"],
     ratio: "16/9",
     youtube: "",
     folder: "film/meomulda-heuteojida", count: 9, cover: "thumb.jpg"
