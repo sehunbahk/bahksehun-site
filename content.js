@@ -12,7 +12,8 @@
 var SITE = {
   role: "Director of Photography / Photographer",
   email: "vivabsh@naver.com",
-  instagram: "bkswnn"          // @ 없이 아이디만
+  instagram: "bkswnn",         // @ 없이 아이디만
+  photo: "images/profile.jpg"  // Info 페이지 프로필 사진. 안 쓰려면 "" 로 두기
 };
 
 
