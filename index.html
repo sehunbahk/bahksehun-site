@@ -68,6 +68,7 @@ dt{color:var(--muted)}dd{margin:0}
 @media (hover:none){.photos .tile:before{background:rgba(0,0,0,.35)}.photos .tile span{opacity:1}}
 .text{max-width:56ch;margin:0 auto;text-align:center}
 .info-page{padding-top:clamp(24px,6vw,64px)}
+.info-page .portrait{display:block;width:clamp(180px,24vw,260px);aspect-ratio:4/5;object-fit:cover;margin:0 auto 40px;background:#111}
 .info-page .role{font-size:clamp(17px,2vw,20px);letter-spacing:.06em;margin:0 0 40px}
 .info-page .contact{font-size:16px;line-height:2;color:var(--muted);margin:0}
 .info-page .contact a{transition:color .2s}
@@ -159,7 +160,7 @@ function render(){
         return'<div class="ps-row '+cls+'">'+r.map(function(x){var i=typeof x==='object'?x.i:x;return'<figure><img src="'+s.photos[i]+'" alt="'+s.t+' '+(i+1)+'" loading="lazy" decoding="async"></figure>'}).join('')+'</div>'}).join('')+'</article>';
     }
   }else if(a==='info'){
-    view.innerHTML='<div class="text info-page"><p class="role">'+esc(INFO.role)+'</p><p class="contact">'+(INFO.email?'<a href="mailto:'+esc(INFO.email)+'">'+esc(INFO.email)+'</a><br>':'')+(INFO.instagram?'<a href="https://www.instagram.com/'+esc(INFO.instagram)+'/" target="_blank" rel="noopener">@'+esc(INFO.instagram)+'</a>':'')+'</p></div>';
+    view.innerHTML='<div class="text info-page">'+(INFO.photo?'<img class="portrait" src="'+esc(INFO.photo)+'" alt="BahkSeHun" onerror="this.remove()">':'')+'<p class="role">'+esc(INFO.role)+'</p><p class="contact">'+(INFO.email?'<a href="mailto:'+esc(INFO.email)+'">'+esc(INFO.email)+'</a><br>':'')+(INFO.instagram?'<a href="https://www.instagram.com/'+esc(INFO.instagram)+'/" target="_blank" rel="noopener">@'+esc(INFO.instagram)+'</a>':'')+'</p></div>';
   }
 }
 var first=true,tm;
